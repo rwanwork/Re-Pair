@@ -32,12 +32,16 @@ Run either executable without any arguments to see the list of options.
 ## Citing
 
 The algorithm is originally described in:
+```
     N. J. Larsson and A. Moffat, "Offline Dictionary-Based Compression".
     Proc. IEEE, 88(11)1722-1732, November 2000
+```
 
 Extensions so that Re-Pair can be used for phrase browsing are covered by:
+```
     R. Wan. "Browsing and Searching Compressed Documents". PhD thesis,
     University of Melbourne, Australia, December 2003.
+```
 
 If you are considering citing this software, then if Re-Pair is being used  on character (i.e., single-byte) data without any alignment to word  boundaries, please cite the Proc. IEEE journal.
 
