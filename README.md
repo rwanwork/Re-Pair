@@ -1,20 +1,6 @@
-Re-Pair and Des-Pair
-====================
+# Re-Pair and Des-Pair
 
-
-Table of Contents
------------------
-  I.    Introduction
-  II.   About The Source Code
-  III.  Compiling
-  IV.   Citing
-  VI.   Version
-  VII.  Copyright and License
-
-
-
-I.  Introduction
-----------------
+## Introduction
 
 Re-Pair is the name of the algorithm and the software which implements the 
 recursive pairing algorithm.  Its corresponding decompressor is Des-Pair.
@@ -27,8 +13,7 @@ Re-Pair operates off-line as it commences after the entire message has
 been read.  For larger messages, fixed-sized blocks can be created.
 
 
-II.  About The Source Code
---------------------------
+## About The Source Code
 
 The source code is written in C and compiled using v4.1.2 of gcc for 
 Debian v4.0 (etch).  It has been compiled and successfully run on both an 
@@ -41,8 +26,7 @@ source code which, if removed, may have a small impact on the execution
 time.
 
 
-III.  Compiling
----------------
+## Compiling
 
 The archive includes a Makefile.  Simply type "make" to build the source 
 code.  There is no "configure" script for determining the system set-up, 
@@ -57,8 +41,7 @@ hierarchy, with zeroes ("0") marking the end of a block.  An entropy coder
 (such as a minimum redundancy (Huffman)) could be used, which is NOT 
 included with this archive.
 
-The cites above made use of the minimum-redundancy coder available here:
-  http://www.csse.unimelb.edu.au/~alistair/mr_coder/.
+The cites above made use of the [minimum-redundancy coder](http://people.eng.unimelb.edu.au/ammoffat/mr_coder/) on Prof. Alistair Moffat's homepage.
 
 In order to decompress a file, run it as:  "despair -i <filename>".  The 
 decompressed file will have the same filename as the original, except with 
@@ -67,15 +50,14 @@ a ".u" suffix added.
 Run either executable without any arguments to see the list of options.
 
 
-IV.  Citing
------------
+## Citing
 
 The algorithm is originally described in:
-  - N. J. Larsson and A. Moffat, "Offline Dictionary-Based Compression".
+    N. J. Larsson and A. Moffat, "Offline Dictionary-Based Compression".
     Proc. IEEE, 88(11)1722-1732, November 2000
 
 Extensions so that Re-Pair can be used for phrase browsing are covered by:
-  - R. Wan. "Browsing and Searching Compressed Documents". PhD thesis,
+    R. Wan. "Browsing and Searching Compressed Documents". PhD thesis,
     University of Melbourne, Australia, December 2003.
 
 If you are considering citing this software, then if Re-Pair is being used 
@@ -92,31 +74,35 @@ Of course, providing the web site where you got this software (see below)
 is also possible.
 
 
-V.  Contact
------------
+## Contact
 
-This software was implemented by Raymond Wan:
-  E-mail:  rwan@kuicr.kyoto-u.ac.jp
-  Homepage:  http://www.bic.kyoto-u.ac.jp/pathway/rwan/
+This software was implemented by me (Raymond Wan) for my PhD thesis at 
+the University of Melbourne (under the supervision of [Prof. Alistair
+Moffat](http://people.eng.unimelb.edu.au/ammoffat/).
 
-Updates to this software can be found at:
-  http://www.bic.kyoto-u.ac.jp/pathway/rwan/software.html
+Currently, I'm at the Hong Kong University of Science and Technology:
 
-While this software is no longer being actively maintained, I would 
-appreciate hearing about any bugs, problems, and comments that you have 
-and will try to update it as necessary.
+     E-mails:  rwan.work@gmail.com
+               OR
+               raymondwan@ust.hk
 
+My homepage is [here](http://www.rwanwork.info/).
 
-VI.  Version
-------------
+The latest version of QScores-Archiver can be downloaded from [GitHub](https://github.com/rwanwork/Re-Pair).
 
-Changes to this software are recorded in the file CHANGES.
+If you have any information about bugs, suggestions for the documentation or just have some general comments, feel free to write to the above address.
 
 
-VII.  Copyright and License
----------------------------
+## Version
 
-Copyright (C) 2003, 2007 by Raymond Wan (rwan@kuicr.kyoto-u.ac.jp)
+Changes to this software are recorded in the file CHANGES up until 
+April 2007.  Since moving the source code to Github on 
+November 13 2014, any changes are recorded there.
+
+
+## Copyright and License
+
+Copyright (C) 2003-2015 by Raymond Wan (rwan.work@gmail.com)
 
 Re-Pair / Des-Pair is free software; you can redistribute it and/or modify 
 it under the terms of the GNU General Public License as published by the 
@@ -124,4 +110,13 @@ Free Software Foundation; either version 2 of the License, or (at your
 option) any later version.  Please see the accompanying file, COPYING for 
 further details.
 
+
+About This Repository
+---------------------
+
+This GitHub repository was created from the original tarball on my homepage a few years ago.  Initially, it was identical to the version as used in my PhD thesis.  Hopefully, it will be easier for me to maintain in GitHub.  (No, I have not given up on it!)
+
+
+    Raymond Wan
+    November 12, 2015
 
