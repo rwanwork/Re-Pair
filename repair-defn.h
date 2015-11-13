@@ -1,32 +1,38 @@
-/*    Re-Pair / Des-Pair
-**    Compressor and decompressor based on recursive pairing.
-**    Copyright (C) 2003, 2007 by Raymond Wan (rwan@kuicr.kyoto-u.ac.jp)
-**
-**    Version 1.0.1 -- 2007/04/02
-**
-**    This file is part of the Re-Pair / Des-Pair software.
-**
-**    Re-Pair / Des-Pair is free software; you can redistribute it and/or modify
-**    it under the terms of the GNU General Public License as published by
-**    the Free Software Foundation; either version 2 of the License, or
-**    (at your option) any later version.
-**
-**    Re-Pair / Des-Pair is distributed in the hope that it will be useful,
-**    but WITHOUT ANY WARRANTY; without even the implied warranty of
-**    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-**    GNU General Public License for more details.
-**
-**    You should have received a copy of the GNU General Public License along
-**    with Re-Pair / Des-Pair; if not, write to the Free Software Foundation, Inc.,
-**    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*/
+/**************************************************************************
+**  Re-Pair / Des-Pair
+**  Compressor and decompressor based on recursive pairing.
+**  
+**  Version N/A (On Github) -- November 13, 2015
+**  
+**  Copyright (C) 2003, 2007, 2015 by Raymond Wan, All rights reserved.
+**  Contact:  rwan.work@gmail.com
+**  Organization:  Division of Life Science, Faculty of Science, Hong Kong
+**                 University of Science and Technology, Hong Kong
+**  
+**  This file is part of Re-Pair / Des-Pair.
+**  
+**  Re-Pair / Des-Pair is free software; you can redistribute it and/or 
+**  modify it under the terms of the GNU General Public License 
+**  as published by the Free Software Foundation; either version 
+**  3 of the License, or (at your option) any later version.
+**  
+**  Re-Pair / Des-Pair is distributed in the hope that it will be useful,
+**  but WITHOUT ANY WARRANTY; without even the implied warranty of
+**  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**  GNU General Public License for more details.
+**  
+**  You should have received a copy of the GNU General Public 
+**  License along with Re-Pair / Des-Pair; if not, see 
+**  <http://www.gnu.org/licenses/>.
+**************************************************************************/
+
 
 #ifndef REPAIR_DEFN_H
 #define REPAIR_DEFN_H
 
-/***************************************************************************
+/******************************
 Forward declaration of important structures defined in other files
-***************************************************************************/
+******************************/
 struct single_node;                                            /*  seq.h  */
 struct seq_node;                                               /*  seq.h  */
 struct phrase;                                              /*  phrase.h  */
@@ -34,14 +40,14 @@ struct tphrase;                                             /*  phrase.h  */
 struct memroot;                                            /*  smalloc.h  */
 struct memindex;                                           /*  smalloc.h  */
 
-/***************************************************************************
+/******************************
 Redefine common primitive data types
-***************************************************************************/
+******************************/
 #define SIZE_OF_UINT 4
 
-/***************************************************************************
+/******************************
 Definitions
-***************************************************************************/
+******************************/
 #define MIN_PHRASE_SIZE (1 << 18)
                         /*  Minimum number of phrases is MIN_PHRASE_SIZE  */
 #define UNINITIALIZED_GENERATION UINT_MAX
@@ -65,9 +71,9 @@ enum R_HEURISTICS { HEUR_NONE = 0, HEUR_WA = 1, HEUR_SIDE = 2, HEUR_NORECUR = 3 
 **  a right phrase?  */
 enum R_PHRASE_SIDE { SIDE_NONE = 0, SIDE_LEFT = 1, SIDE_RIGHT = 2 };
 
-/***************************************************************************
+/******************************
 Structure definitions
-***************************************************************************/
+******************************/
 /*
 **  Structure to be filled in using command line arguments (or
 **  directly through other means).  The meaning of each variable is

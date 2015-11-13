@@ -1,0 +1,13 @@
+2014-11-13  Raymond Wan  <rwan.work@gmail.com>
+  * Migration to GitHub.  Changes to program no longer being recorded in this file.  See the git log instead.
+
+2007-02-19  Raymond Wan  <rwan@kuicr.kyoto-u.ac.jp>
+  * Software released as v1.0.1 .
+  
+    Minor changes to names of files and comments.
+
+2007-02-19  Raymond Wan  <rwan@kuicr.kyoto-u.ac.jp>
+  * Software released as v1.0 .
+  
+    Initial software release.
+
