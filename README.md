@@ -18,11 +18,16 @@ This main purpose of this software was for research.  Therefore, additional chec
 
 ## Compiling
 
-The archive includes a Makefile.  Simply type `make` to build the source  code.  There is no `configure` script for determining the system set-up,  though this may happen with a future release.
+The archive includes a `CMakeLists.txt`.  To create an out-of-source build, create a `build/` directory and run `cmake` version 3.2 or higher.  A `Makefile` will be created.  Then type `make`.  For example, if you're in the source directory,
 
-To compress a file, run it as:  `repair -i <filename>`.  Two outputs are  produced:  `filename.prel` and `filename.seq`.  The first file is the  phrase hierarchy (or prelude).  It has been encoded using interpolative  coding (see the above cites for more information).  The second file is the  sequence and is simply a file of 4-byte integers which map to the  hierarchy, with zeroes ("0") marking the end of a block.  An entropy coder  (such as a minimum redundancy (Huffman)) could be used, which is NOT  included with this archive.
+```
+    mkdir build
+    cd build
+    cmake ..
+    make
+```
 
-The cites above made use of the [minimum-redundancy coder](http://people.eng.unimelb.edu.au/ammoffat/mr_coder/) on Prof. Alistair Moffat's homepage.
+To compress a file, run it as:  `repair -i <filename>`.  Two outputs are  produced:  `filename.prel` and `filename.seq`.  The first file is the  phrase hierarchy (or prelude).  It has been encoded using interpolative  coding (see the above cites for more information).  The second file is the sequence and is simply a file of 4-byte integers which map to the  hierarchy, with zeroes ("0") marking the end of a block.  An entropy coder (such as a minimum redundancy (Huffman)) could be used, which is NOT included with this archive.  For example, previous work made use of the [minimum-redundancy coder](http://people.eng.unimelb.edu.au/ammoffat/mr_coder/) on Prof. Alistair Moffat's homepage to compress the sequence.
 
 In order to decompress a file, run it as:  `despair -i <filename>`.  The  decompressed file will have the same filename as the original, except with  a `.u` suffix added.
 
@@ -62,21 +67,21 @@ Currently, I'm at the Hong Kong University of Science and Technology:
 
 My homepage is [here](http://www.rwanwork.info/).
 
-The latest version of QScores-Archiver can be downloaded from [GitHub](https://github.com/rwanwork/Re-Pair).
+The latest version of Re-Pair can be downloaded from [GitHub](https://github.com/rwanwork/Re-Pair).
 
 If you have any information about bugs, suggestions for the documentation or just have some general comments, feel free to write to the above address.
 
 
 ## Version
 
-Changes to this software are recorded in the file CHANGES up until April 2007.  Since moving the source code to Github on November 13 2014, any changes are recorded there.
+Changes to this software are recorded in the file ChangeLog up until April 2007.  Since moving the source code to Github on November 13, 2014, any changes are recorded there.
 
 
 ## Copyright and License
 
 Copyright (C) 2003-2015 by Raymond Wan (rwan.work@gmail.com)
 
-Re-Pair / Des-Pair is free software; you can redistribute it and/or modify  it under the terms of the GNU General Public License as published by the  Free Software Foundation; either version 2 of the License, or (at your  option) any later version.  Please see the accompanying file, COPYING for  further details.
+Re-Pair / Des-Pair is free software; you can redistribute it and/or modify  it under the terms of the GNU General Public License as published by the  Free Software Foundation; either version 3 of the License, or (at your  option) any later version.  Please see the accompanying file, COPYING.v3 for further details.
 
 
 About This Repository
@@ -86,5 +91,5 @@ This GitHub repository was created from the original tarball on my homepage a fe
 
 
     Raymond Wan
-    November 12, 2015
+    November 13, 2015
 
