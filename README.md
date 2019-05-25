@@ -57,19 +57,15 @@ Of course, providing the web site where you got this software (see below)  is al
 
 ## Contact
 
-This software was implemented by me (Raymond Wan) for my PhD thesis at  the University of Melbourne (under the supervision of [Prof. Alistair Moffat](http://people.eng.unimelb.edu.au/ammoffat/).
+This software was implemented by me (Raymond Wan) for my PhD thesis at  the University of Melbourne (under the supervision of [Prof. Alistair Moffat](http://people.eng.unimelb.edu.au/ammoffat/).  My contact details:
 
-Currently, I'm at the Hong Kong University of Science and Technology:
-
-     E-mails:  rwan.work@gmail.com
-               OR
-               raymondwan@ust.hk
+     E-mail:  rwan.work@gmail.com 
 
 My homepage is [here](http://www.rwanwork.info/).
 
 The latest version of Re-Pair can be downloaded from [GitHub](https://github.com/rwanwork/Re-Pair).
 
-If you have any information about bugs, suggestions for the documentation or just have some general comments, feel free to write to the above address.
+If you have any information about bugs, suggestions for the documentation or just have some general comments, feel free to contact me via e-mail or GitHub.
 
 
 ## Version
