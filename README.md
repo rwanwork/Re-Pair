@@ -1,13 +1,16 @@
-# Re-Pair and Des-Pair
+Re-Pair and Des-Pair
+====================
 
-## Introduction
+Introduction
+------------
 
 Re-Pair is the name of the algorithm and the software which implements the  recursive pairing algorithm.  Its corresponding decompressor is Des-Pair.
 
 The Re-Pair algorithm reduces a message by recursively pairing adjacent  symbols and replacing these symbols with a new symbol.  This continues  until no pair of adjacent symbols occur twice.  A dictionary of phrases  (the phrase hierarchy) and a sequence of symbols are produced as output.   Re-Pair operates off-line as it commences after the entire message has  been read.  For larger messages, fixed-sized blocks can be created.
 
 
-## About The Source Code
+About The Source Code
+---------------------
 
 The source code is written in C and compiled using v4.1.2 of gcc for  Debian v4.0 (etch).  It has been compiled and successfully run on both an  Intel Pentium 4 CPU (32-bit) and an Intel Core 2 Duo CPU (64-bit).  However, it takes no advantages of the 64-bit architecture.
 
@@ -16,7 +19,8 @@ In 2015, it could be compiled on an Ubuntu 15.10 (64-bit) using gcc version 5.2.
 This main purpose of this software was for research.  Therefore, additional checks and extraneous information has been added into the source code which, if removed, may have a small improvement on the execution time.
 
 
-## Compiling
+Compiling
+---------
 
 The archive includes a `CMakeLists.txt`.  To create an out-of-source build, create a `build/` directory and run `cmake` version 3.2 or higher.  A `Makefile` will be created.  Then type `make`.  For example, if you're in the source directory,
 
@@ -34,7 +38,8 @@ In order to decompress a file, run it as:  `despair -i <filename>`.  The  decomp
 Run either executable without any arguments to see the list of options.
 
 
-## Citing
+Citing
+------
 
 The algorithm is originally described in:
 ```
@@ -55,7 +60,8 @@ However, if it is being used in the context of phrase browsing with the  other s
 Of course, providing the web site where you got this software (see below)  is also possible.
 
 
-## Contact
+Contact
+-------
 
 This software was implemented by me (Raymond Wan) for my PhD thesis at  the University of Melbourne (under the supervision of [Prof. Alistair Moffat](http://people.eng.unimelb.edu.au/ammoffat/).  My contact details:
 
@@ -68,14 +74,16 @@ The latest version of Re-Pair can be downloaded from [GitHub](https://github.com
 If you have any information about bugs, suggestions for the documentation or just have some general comments, feel free to contact me via e-mail or GitHub.
 
 
-## Version
+Version
+-------
 
-Changes to this software are recorded in the file ChangeLog up until April 2007.  Since moving the source code to Github on November 13, 2014, any changes are recorded there.
+Changes to this software are recorded in the file ChangeLog up until April 2007.  Since moving the source code to GitHub on November 13, 2014, any changes are recorded in the repository's history.
 
 
-## Copyright and License
+Copyright and License
+---------------------
 
-Copyright (C) 2003-2015 by Raymond Wan (rwan.work@gmail.com)
+Copyright (C) 2003-2019 by Raymond Wan (rwan.work@gmail.com)
 
 Re-Pair / Des-Pair is free software; you can redistribute it and/or modify  it under the terms of the GNU General Public License as published by the  Free Software Foundation; either version 3 of the License, or (at your  option) any later version.  Please see the accompanying file, COPYING.v3 for further details.
 
@@ -87,5 +95,5 @@ This GitHub repository was created from the original tarball on my homepage a fe
 
 
     Raymond Wan
-    November 13, 2015
+    September 10, 2019
 
