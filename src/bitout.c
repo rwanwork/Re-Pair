@@ -39,7 +39,7 @@ static void unaryEncode (FILE *filedesc, R_UINT x, R_UINT lo);
 static void unaryEncodeUpperLimit (FILE *filedesc, R_UINT x, R_UINT lo, R_UINT hi);
 
 void writeBits (FILE *filedesc, R_UINT x, R_UINT bits, R_BOOLEAN isflush) {
-  R_UINT n_written;
+  R_UINT n_written = 0;
   static R_UINT bitBuffer = 0;
   static R_UINT unusedBits = UINT_SIZE_BITS;
   static R_UINT bufferPos = 0;
@@ -68,7 +68,7 @@ void writeBits (FILE *filedesc, R_UINT x, R_UINT bits, R_BOOLEAN isflush) {
       buffer[bufferPos++] = (R_UCHAR) (bitBuffer);
 
       if (bufferPos >= BUFFERTOP) {            /*  Write bits out  */
-	n_written = (R_UINT) fwrite (buffer, sizeof (buffer[0]), (size_t) bufferPos, filedesc);
+        n_written = (R_UINT) fwrite (buffer, sizeof (buffer[0]), (size_t) bufferPos, filedesc);
         bufferPos = 0;
       }
       if (bits - unusedBits != UINT_SIZE_BITS) {

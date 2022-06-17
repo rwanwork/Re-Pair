@@ -76,7 +76,6 @@ Bit masking
     else { \
       fprintf (stderr, "Error opening %s.\n", FILENAME); \
     } \
-    fprintf (stderr, "Error %s %s.\n", MODE == "w" ? "creating" : "opening", FILENAME); \
     exit (EXIT_FAILURE); \
   }
 
