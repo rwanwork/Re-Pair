@@ -1,14 +1,10 @@
 ###########################################################################
 ##  Re-Pair / Des-Pair
 ##  Compressor and decompressor based on recursive pairing.
-##  
-##  Version N/A (On Github) -- November 13, 2015
-##  
-##  Copyright (C) 2003, 2007, 2015 by Raymond Wan, All rights reserved.
+##
+##  Copyright (C) 2003-2022 by Raymond Wan, All rights reserved.
 ##  Contact:  rwan.work@gmail.com
-##  Organization:  Division of Life Science, Faculty of Science, Hong Kong
-##                 University of Science and Technology, Hong Kong
-##  
+##
 ##  This file is part of Re-Pair / Des-Pair.
 ##  
 ##  Re-Pair / Des-Pair is free software; you can redistribute it and/or 
@@ -26,25 +22,25 @@
 ##  <http://www.gnu.org/licenses/>.
 ###########################################################################
 
-
-CMAKE_MINIMUM_REQUIRED (VERSION 3.2)
+##  Set the minimum required CMake version
+cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 
 
 ########################################
 ##  Variables specific to this project
-SET (TARGET_NAME_REPAIR "repair")
-SET (TARGET_NAME_DESPAIR "despair")
-SET (CURR_PROJECT_NAME "Re-Pair")
+set (TARGET_NAME_REPAIR "repair")
+set (TARGET_NAME_DESPAIR "despair")
+set (CURR_PROJECT_NAME "Re-Pair")
 
 
 ##  Source files common to both Re-Pair and Des-Pair
-SET (COMMON_SRC_FILES
+set (COMMON_SRC_FILES
   utils.c
   wmalloc.c 
 )
 
 ##  Source files for Re-Pair
-SET (REPAIR_SRC_FILES
+set (REPAIR_SRC_FILES
   repair.c 
   main-repair.c 
   seq.c 
@@ -57,7 +53,7 @@ SET (REPAIR_SRC_FILES
 )
 
 ##  Source files for Des-Pair
-SET (DESPAIR_SRC_FILES
+set (DESPAIR_SRC_FILES
   despair.c 
   main-despair.c 
   bitin.c
@@ -70,24 +66,24 @@ SET (DESPAIR_SRC_FILES
 ##  Set up the software
 
 ##  Project name
-PROJECT (${CURR_PROJECT_NAME} VERSION 1.0 LANGUAGES C)
-MESSAGE (STATUS "Setting up ${CURR_PROJECT_NAME}, version ${PROJECT_VERSION}...")
+project (${CURR_PROJECT_NAME} VERSION 1.0 LANGUAGES C)
+message (STATUS "Setting up ${CURR_PROJECT_NAME}, version ${PROJECT_VERSION}...")
 
 
 ########################################
 ##  Create the executables
 
 ##  Compressor
-IF (NOT TARGET ${TARGET_NAME_REPAIR})
-  ADD_EXECUTABLE (${TARGET_NAME_REPAIR} ${COMMON_SRC_FILES} ${REPAIR_SRC_FILES})
-  INSTALL (TARGETS ${TARGET_NAME_REPAIR} DESTINATION bin)
-ENDIF (NOT TARGET ${TARGET_NAME_REPAIR})
+if (NOT TARGET ${TARGET_NAME_REPAIR})
+  add_executable (${TARGET_NAME_REPAIR} ${COMMON_SRC_FILES} ${REPAIR_SRC_FILES})
+  install (TARGETS ${TARGET_NAME_REPAIR} DESTINATION bin)
+endif (NOT TARGET ${TARGET_NAME_REPAIR})
 
 ##  Decompressor
-IF (NOT TARGET ${TARGET_NAME_DESPAIR})
-  ADD_EXECUTABLE (${TARGET_NAME_DESPAIR} ${COMMON_SRC_FILES} ${DESPAIR_SRC_FILES})
-  INSTALL (TARGETS ${TARGET_NAME_DESPAIR} DESTINATION bin)
-ENDIF (NOT TARGET ${TARGET_NAME_DESPAIR})
+if (NOT TARGET ${TARGET_NAME_DESPAIR})
+  add_executable (${TARGET_NAME_DESPAIR} ${COMMON_SRC_FILES} ${DESPAIR_SRC_FILES})
+  install (TARGETS ${TARGET_NAME_DESPAIR} DESTINATION bin)
+endif (NOT TARGET ${TARGET_NAME_DESPAIR})
 
 
 ########################################
@@ -98,7 +94,7 @@ ENDIF (NOT TARGET ${TARGET_NAME_DESPAIR})
 ##  * Print malloc information:  -DCOUNT_MALLOC
 ##  * Print out more information than -v:  -DDEBUG
 
-SET (EXTRA_CFLAGS "")
+set (EXTRA_CFLAGS "")
 
 
 ########################################
@@ -113,13 +109,13 @@ SET (EXTRA_CFLAGS "")
 ##                              and expanding phrases as necessary.
 ##
 ##  Must choose one and CANNOT be left blank.  (Compiler errors will result.)
-SET (DESPAIR_EXPAND_MODE "-DNORMAL_EXPAND")
+set (DESPAIR_EXPAND_MODE "-DNORMAL_EXPAND")
 
 ##  Turn on lots of warnings; set optimization flag to -O3
-SET (MY_C_FLAGS "-Wno-long-long -pedantic -Wall -Wwrite-strings -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Winline -O3")
+set (MY_C_FLAGS "-Wno-long-long -pedantic -Wall -Wwrite-strings -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Winline -O3")
 
 ##  Create the final compiler flags for the C compiler
-SET (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${MY_C_FLAGS} ${DESPAIR_EXPAND_MODE} ${EXTRA_CFLAGS}")
+set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${MY_C_FLAGS} ${DESPAIR_EXPAND_MODE} ${EXTRA_CFLAGS}")
 
 
 ############################################################
