@@ -63,7 +63,7 @@ Of course, providing the web site where you got this software (see below) would 
 Contact
 -------
 
-This software was implemented by me (Raymond Wan) for my PhD thesis at the University of Melbourne (under the supervision of [Prof. Alistair Moffat](http://people.eng.unimelb.edu.au/ammoffat/).  My contact details:
+This software was implemented by me (Raymond Wan) for my PhD thesis at the University of Melbourne (under the supervision of [Prof. Alistair Moffat](http://people.eng.unimelb.edu.au/ammoffat/)).  My contact details:
 
      E-mail:  rwan.work@gmail.com 
 
