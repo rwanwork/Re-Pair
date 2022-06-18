@@ -21,7 +21,7 @@
 ##  License along with Re-Pair / Des-Pair; if not, see 
 ##  <http://www.gnu.org/licenses/>.
 ###########################################################################
-CMAKE_MINIMUM_REQUIRED (VERSION 3.2)
+CMAKE_MINIMUM_REQUIRED (VERSION 3.5)
 
 ##  Project name
 PROJECT ("Re-Pair" VERSION 1.0 LANGUAGES C)
