@@ -12,7 +12,7 @@ The Re-Pair algorithm reduces a message by recursively pairing adjacent symbols 
 About The Source Code
 ---------------------
 
-The source code is written in C and was originally compiled using v4.1.2 of gcc for Debian v4.0 (etch).  It has been compiled and successfully run on both an Intel Pentium 4 CPU (32-bit) and an Intel Core 2 Duo CPU (64-bit).  However, it makes no use of the advantages from the 64-bit architecture.
+The source code is written in C and was originally compiled using v4.1.2 of gcc for Debian v4.0 (etch).  It has been compiled and successfully run on both an Intel Pentium 4 CPU (32-bit) and an Intel Core 2 Duo CPU (64-bit).  However, it makes no use of the advantages offered by 64-bit architecture.
 
 In 2022, it could be compiled on an Ubuntu 22.04 (64-bit) system using gcc version 11.2.0, with neglible compiler warnings .
 
