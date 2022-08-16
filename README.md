@@ -9,7 +9,7 @@ Re-Pair is the name of the algorithm and the software which implements the recur
 The Re-Pair algorithm reduces a message by recursively pairing adjacent symbols and replacing these symbols with a new symbol.  This continues until no pair of adjacent symbols occur twice.  A dictionary of phrases (the phrase hierarchy) and a sequence of symbols are produced as output.  Re-Pair operates off-line as it commences after the entire message has been read.  For larger messages, fixed-sized blocks can be created.
 
 
-About The Source Code
+About the Source Code
 ---------------------
 
 The source code is written in C and was originally compiled using v4.1.2 of gcc for Debian v4.0 (etch).  It has been compiled and successfully run on both an Intel Pentium 4 CPU (32-bit) and an Intel Core 2 Duo CPU (64-bit).  However, it makes no use of the advantages offered by 64-bit architecture.
