@@ -33,6 +33,9 @@ set (TARGET_NAME_DESPAIR "despair")
 set (CURR_PROJECT_NAME "Re-Pair")
 
 
+########################################
+##  Source files
+
 ##  Source files common to both Re-Pair and Des-Pair
 set (COMMON_SRC_FILES
   utils.c
